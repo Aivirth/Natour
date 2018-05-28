@@ -11,6 +11,7 @@ Dark green: #28b485
   padding: 0;
   border: 0;
   box-sizing: border-box;
+  margin: 0;
 }
 
 body {
@@ -54,12 +55,14 @@ body {
   top: 40%;
   left: 50%;
   transform: translateY(-50%) translateX(-50%);
+  text-align: center;
 }
 
 .heading-primary {
   color: rgb(255, 255, 255);
   text-transform: uppercase;
   backface-visibility: hidden;
+  margin-bottom: 25px;
 }
 
 .heading-primary > span {
@@ -70,14 +73,14 @@ body {
   font-size: 60px;
   font-weight: 400;
   letter-spacing: 35px;
-  animation: moveInLeft ease-out 1s;
+  animation: moveInLeft ease-out 1.5s;
 }
 
 .heading-primary-sub {
   font-size: 20px;
   font-weight: 700;
   letter-spacing: 17.4px;
-  animation: moveInRight ease-out 1s;
+  animation: moveInRight ease-out 1.5s;
 }
 
 @keyframes moveInLeft {
@@ -109,4 +112,28 @@ body {
     opacity: 1;
     transform: translateX(0px);
   }
+}
+
+.btn:link,
+.btn:visited {
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 15px 40px;
+  display: inline-block;
+  border-radius: 100px;
+  transition: all 0.2s linear;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-white {
+  background-color: #fff;
+  color: #777;
 }
