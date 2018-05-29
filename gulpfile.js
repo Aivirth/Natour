@@ -6,6 +6,7 @@ const sourcemaps = require("gulp-sourcemaps");
 const autoprefixer = require("gulp-autoprefixer");
 const cssnano = require("gulp-cssnano");
 const rename = require("gulp-rename");
+const gcmq = require("gulp-group-css-media-queries");
 
 const configuration = require("./gulpconfig.json");
 const paths = configuration.paths;
@@ -16,6 +17,7 @@ gulp.task("sassmin", () => {
   return gulp
     .src([`${paths.sass}/*.scss`])
     .pipe(sass({ errLogToConsole: true }))
+    .pipe(gcmq())
     .pipe(sourcemaps.init({ loadMaps: true }))
     .pipe(
       plumber({
@@ -37,6 +39,7 @@ gulp.task("sass", () => {
   return gulp
     .src([`${paths.sass}/*.scss`])
     .pipe(sass({ errLogToConsole: true }))
+    .pipe(gcmq())
     .pipe(sourcemaps.init({ loadMaps: true }))
     .pipe(
       plumber({
