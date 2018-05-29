@@ -1,0 +1,23 @@
+.u-center-text {
+  text-align: center;
+}
+
+@for $i from 1 through 8 {
+  .u-margin-#{$i} {
+    margin: $i * 1rem;
+  }
+  .u-margin-bottom-#{$i} {
+    margin-bottom: $i * 1rem;
+  }
+  .u-margin-top-#{$i} {
+    margin-top: $i * 1rem;
+  }
+  .u-margin-y-#{$i} {
+    margin-bottom: $i * 1rem;
+    margin-top: $i * 1rem;
+  }
+  .u-margin-x-#{$i} {
+    margin-left: $i * 1rem;
+    margin-right: $i * 1rem;
+  }
+}

@@ -1,7 +1,7 @@
 .row {
   // max-width: (1140 / 10) * 1rem;
   max-width: $grid-width;
-  background-color: #eee;
+  // background-color: #eee;
   margin: 0 auto;
   @include clearfix;
 
@@ -9,7 +9,7 @@
     margin-bottom: $grid-row-mb;
   }
   > div[class^="col-"] {
-    background: orangered;
+    // background: orangered;
     margin-right: $grid-gutter;
     float: left;
     &:last-child {
