@@ -1,5 +1,4 @@
 const gulp = require("gulp");
-const browserSync = require("browser-sync").create();
 const sass = require("gulp-sass");
 const plumber = require("gulp-plumber");
 const watch = require("gulp-watch");
