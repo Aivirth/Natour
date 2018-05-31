@@ -2,7 +2,7 @@
   text-align: center;
 }
 
-@for $i from 1 through 8 {
+@for $i from 1 through 10 {
   .u-margin-#{$i} {
     margin: $i * 1rem;
   }
