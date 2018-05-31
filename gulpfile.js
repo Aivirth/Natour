@@ -16,7 +16,7 @@ const paths = configuration.paths;
 gulp.task("sassmin", () => {
   return gulp
     .src([`${paths.sass}/*.scss`])
-    .pipe(sass({ errLogToConsole: true }))
+    .pipe(sass().on("error", sass.logError))
     .pipe(gcmq())
     .pipe(sourcemaps.init({ loadMaps: true }))
     .pipe(
