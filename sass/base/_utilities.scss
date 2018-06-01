@@ -1,23 +1,23 @@
 .u-center-text {
-  text-align: center;
+  text-align: center !important;
 }
 
 @for $i from 1 through 10 {
   .u-margin-#{$i} {
-    margin: $i * 1rem;
+    margin: $i * 1rem !important;
   }
   .u-margin-bottom-#{$i} {
-    margin-bottom: $i * 1rem;
+    margin-bottom: $i * 1rem !important;
   }
   .u-margin-top-#{$i} {
-    margin-top: $i * 1rem;
+    margin-top: $i * 1rem !important;
   }
   .u-margin-y-#{$i} {
-    margin-bottom: $i * 1rem;
-    margin-top: $i * 1rem;
+    margin-bottom: $i * 1rem !important;
+    margin-top: $i * 1rem !important;
   }
   .u-margin-x-#{$i} {
-    margin-left: $i * 1rem;
-    margin-right: $i * 1rem;
+    margin-left: $i * 1rem !important;
+    margin-right: $i * 1rem !important;
   }
 }
