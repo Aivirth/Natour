@@ -7,9 +7,19 @@
   top: 0;
   left: 0;
 
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease;
+  &:target {
+    opacity: 1;
+    visibility: visible;
+  }
+
   &__content {
+    opacity: 0;
     overflow: hidden;
     @include absoluteCenter;
+    transform: translate(-50%, -50%) scale(0.5);
     width: 65%;
     margin: auto;
     background: $color-white;
@@ -17,6 +27,7 @@
     box-shadow: 0 2rem 4rem rgba($color-black, 0.2);
     border-radius: 3px;
     display: table;
+    transition: all 0.5s 0.2s ease-out;
   }
   &__left {
     width: 33.33333%;
@@ -39,5 +50,27 @@
     column-gap: 4rem;
     column-rule: 1px solid $color-gray-light-2;
     hyphens: auto;
+  }
+  &:target &__content {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  &__close {
+    z-index: 10000;
+    line-height: 1;
+    &:link,
+    &:visited {
+      color: $color-grey-dark;
+      position: absolute;
+      top: 2.5rem;
+      right: 2.5rem;
+      font-size: 3rem;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.2s;
+    }
+    &:hover {
+      color: $color-primary;
+    }
   }
 }
