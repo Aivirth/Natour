@@ -17,7 +17,6 @@
   },
   "homepage": "https://github.com/Aivirth/Natour#readme",
   "devDependencies": {
-    "browser-sync": "^2.24.4",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^5.0.0",
     "gulp-cssnano": "^2.1.3",
