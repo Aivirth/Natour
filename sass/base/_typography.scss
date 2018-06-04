@@ -3,6 +3,7 @@
   text-transform: uppercase;
   backface-visibility: hidden;
   margin-bottom: 6rem;
+
   > span {
     display: block;
   }
@@ -12,6 +13,10 @@
     font-weight: 400;
     letter-spacing: 3.5rem;
     animation: moveInLeft ease-out 1.5s;
+    @include respond(phone) {
+      letter-spacing: 1rem;
+      font-size: 4.5rem;
+    }
   }
 
   &--sub {
@@ -19,6 +24,10 @@
     font-weight: 700;
     letter-spacing: 1.75rem;
     animation: moveInRight ease-out 1.5s;
+    @include respond(phone) {
+      letter-spacing: 0.5rem;
+      font-size: 1.5rem;
+    }
   }
 }
 
@@ -36,6 +45,14 @@
   color: transparent;
   transition: all 0.2s linear;
   letter-spacing: 2px;
+
+  @include respond(tab-port) {
+    font-size: 2.5rem;
+  }
+  @include respond(phone) {
+    font-size: 2rem;
+  }
+
   &:hover {
     transform: skewY(2deg) skew(15deg) scale(1.1);
     text-shadow: 0.5rem 1rem 2rem rgba($color-black, 0.2);

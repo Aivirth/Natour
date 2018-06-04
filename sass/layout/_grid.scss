@@ -1,19 +1,33 @@
 .row {
   // max-width: (1140 / 10) * 1rem;
   max-width: $grid-width;
-  // background-color: #eee;
   margin: 0 auto;
   @include clearfix;
 
+  @include respond(tab-port) {
+    max-width: 50rem;
+    padding: 0 1.5rem;
+  }
+
   &:not(:last-child) {
     margin-bottom: $grid-row-mb;
+    @include respond(tab-port) {
+      margin-bottom: $grid-row-mb-small;
+    }
   }
   > div[class^="col-"] {
-    // background: orangered;
     margin-right: $grid-gutter;
     float: left;
     &:last-child {
       margin-right: 0;
+      @include respond(tab-port) {
+        margin-right: 0;
+      }
+    }
+
+    @include respond(tab-port) {
+      width: 100% !important;
+      margin-bottom: $grid-row-mb-small;
     }
   }
 

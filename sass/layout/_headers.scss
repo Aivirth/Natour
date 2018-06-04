@@ -11,8 +11,12 @@
   background-position: top;
 
   /* x y, x y */
-  // -webkit-clip-path: polygon(0 0, 100% 0%, 100% 75vh, 0% 100%);
   clip-path: polygon(0 0, 100% 0%, 100% 75vh, 0% 100%);
+
+  @include respond(phone) {
+    clip-path: polygon(0 0, 100% 0%, 100% 85vh, 0% 100%);
+    margin-bottom: 10rem;
+  }
 
   &__logo-box {
     position: absolute;
