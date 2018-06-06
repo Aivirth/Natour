@@ -12,6 +12,7 @@
   @include respond(tab-port) {
     width: 100%;
     padding: 3rem;
+    padding-left: 4.5rem;
     transform: skewX(0deg);
   }
 
@@ -30,7 +31,7 @@
     clip-path: circle(50% at 50% 50%);
     transform: translateX(-3rem) skewX(12deg);
     @include respond(tab-port) {
-      transform: translateX(-3rem) skewX(0deg);
+      transform: translateX(-1.5rem) skewX(0deg);
     }
   }
   &__img {

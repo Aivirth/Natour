@@ -33,15 +33,33 @@
     width: 33.33333%;
     display: table-cell;
     vertical-align: middle;
+    @include respond(tab-port) {
+      width: 100%;
+      display: block;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      padding-top: 3px;
+    }
   }
   &__right {
     width: 66.66667%;
     display: table-cell;
     vertical-align: middle;
+    @include respond(tab-port) {
+      width: 100%;
+      display: block;
+      margin-bottom: 1.5rem;
+      padding: 1.5rem;
+    }
   }
   &__img {
     display: block;
     width: 100%;
+
+    @include respond(tab-port) {
+      width: 49%;
+      display: inline-block;
+    }
   }
   &__text {
     font-size: 1.4rem;
@@ -71,6 +89,12 @@
     }
     &:hover {
       color: $color-primary;
+    }
+
+    @include respond(tab-port) {
+      padding: 0.3rem 1rem 0.6rem 1rem;
+      background: rgba(0, 0, 0, 0.18);
+      border-radius: 50%;
     }
   }
 }
